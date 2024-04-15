@@ -31,8 +31,4 @@
     <Folder Include="Drivers\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\AQA_Finals\AQA_Finals.csproj" />
-  </ItemGroup>
-
 </Project>
