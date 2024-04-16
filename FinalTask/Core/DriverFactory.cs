@@ -14,6 +14,7 @@ namespace FinalTask.Core
             chromeOptions.AddArguments("--incognito");
             chromeOptions.AddArguments("--disable-gpu");
             chromeOptions.AddArguments("--disable-extensions");
+            chromeOptions.AddArguments("--remote-debugging-pipe");
 
             //chromeOptions.AddArguments("--headless");
 
