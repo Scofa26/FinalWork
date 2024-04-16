@@ -31,4 +31,8 @@
     <Folder Include="Drivers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FinalTask\FinalTask.csproj" />
+  </ItemGroup>
+
 </Project>

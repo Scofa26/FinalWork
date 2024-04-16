@@ -8,7 +8,7 @@ namespace FinalTask.Models
 {
     public class Project
     {
-        public required int Id { get; set; }
+        public int Id { get; set; }
         public required string Name { get; set; }
         public string? Summary { get; set; }
         public string? DefaultAccess { get; set; }

@@ -1,9 +1,9 @@
 ﻿using Microsoft.Playwright;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
-using AQA_Finals.Core;
-using AQA_Finals.Helpers.Configuration;
-using AQA_Finals.Models;
+using FinalTask.Core;
+using FinalTask.Helpers.Configuration;
+using FinalTask.Models;
 
 namespace SpecFlowProject3.Hooks
 {

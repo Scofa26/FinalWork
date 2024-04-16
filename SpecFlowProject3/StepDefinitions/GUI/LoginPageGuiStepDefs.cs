@@ -1,7 +1,7 @@
-﻿using AQA_Finals.Core;
-using AQA_Finals.Models;
-using AQA_Finals.Pages;
-using AQA_Finals.Steps;
+﻿using FinalTask.Core;
+using FinalTask.Models;
+using FinalTask.Pages;
+using FinalTask.Steps;
 
 
 namespace SpecFlowProject3.StepDefinitions.GUI
@@ -16,7 +16,7 @@ namespace SpecFlowProject3.StepDefinitions.GUI
             NavigationSteps = new NavigationSteps(Driver);
         }
 
-        [Given("open the login page")]
+        [Given("open the login page and enter pass and email")]
         public void NavigateToLoginPage()
         {
             NavigationSteps.SuccessfulLogin(Admin);

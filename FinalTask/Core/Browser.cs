@@ -9,15 +9,7 @@ namespace FinalTask.Core
 
         public Browser()
         {
-            Driver = Configurator.BrowserType?.ToLower() switch
-            {
-                "chrome" => new DriverFactory().GetChromeDriver(),
-                "firefox" => new DriverFactory().GetFirefoxDriver(),
-                _ => Driver
-            } ?? throw new InvalidOperationException("Browser is not supported.");
-
-            Driver.Manage().Window.Maximize();
-            Driver.Manage().Cookies.DeleteAllCookies();
+           
         }
 
         public void SetUpDriver()

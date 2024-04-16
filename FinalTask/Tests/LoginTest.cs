@@ -20,10 +20,10 @@ namespace FinalTask.Tests
             _loginPage.ClickLoginButton();
 
             HomePage _homepage = new HomePage(Driver);
-
+            _homepage.FindAllProjects("projectName");
             _homepage.AddProjectButtonClick();
 
-         
+            
             Thread.Sleep(5000);
         }
 
