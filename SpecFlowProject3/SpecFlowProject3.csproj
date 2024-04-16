@@ -37,10 +37,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include=".github\workflows\dotnet-desktop.yml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\FinalTask\FinalTask.csproj" />
   </ItemGroup>
 
