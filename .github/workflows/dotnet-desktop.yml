@@ -35,6 +35,11 @@ jobs:
       with:
         dotnet-version: 8.0.x
         
+    - name: DotNetCoreCLI@2
+      with: 
+         command: 'test'
+         projects: 'SpecFlowProject3.csproj'
+    
     - name: Run SpecFlow Tests
   # You may pin to the exact commit or the version.
   # uses: cryptic-wizard/run-specflow-tests@e777fc7e6f3e87142b6537dd2958e0856c63f85c
