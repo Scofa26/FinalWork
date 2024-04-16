@@ -16,8 +16,11 @@ namespace FinalTask.Pages
         private static readonly By ProjectSummaryInput = By.TagName("textarea");
         private static readonly By CreateProjectButton = By.CssSelector("[class='ui button primary']");
         private static readonly By ModalDialogTitle = By.CssSelector("[class='dialog__header__content__title']");
+        private static readonly By CountOfChars = By.CssSelector("[class='maxlength-counter__counter']");
+        private static readonly By NavbarUserIconLink = By.CssSelector("[class='navbar__user__icon__link']");
+        private static readonly By AlertHeader = By.CssSelector("[class='popup__menu__header']");
+        private static readonly By AdminLink = By.LinkText("https://mtswork.testmo.net/admin");
 
-        private List<IWebElement> _projectNames;
         public HomePage(IWebDriver driver) : base(driver)
         {
         }
@@ -31,19 +34,15 @@ namespace FinalTask.Pages
         public IWebElement ProjectSummaryInputBy => WaitHelpers.WaitForExists(ProjectSummaryInput);
         public IWebElement CreateProjectButtonBy => WaitHelpers.WaitForExists(CreateProjectButton);
         public IWebElement ModalDialogTitleBy => WaitHelpers.WaitForExists(ModalDialogTitle);
+        public IWebElement CountOfCharsBy => WaitHelpers.WaitForExists(CountOfChars);
+        public IWebElement NavbarUserIconLinkBy => WaitHelpers.WaitForExists(NavbarUserIconLink);
+        public IWebElement AlertHeaderBy => WaitHelpers.WaitForExists(AlertHeader);
+        public IWebElement AdminLinkBy => WaitHelpers.WaitForExists(AdminLink);
 
         public void AddProjectButtonClick() => AddProjectButtonBy.Click();
         public void CreateProjectButtonClick() => CreateProjectButtonBy.Click();
 
-        public bool FindAllProjects(string name)
-        {
-            IReadOnlyList <IWebElement> _projectNames = Driver.FindElements(By.TagName("a"));
-            bool res = false;
-            foreach (var pr in _projectNames)
-                if (pr.Text == name) res = true;
-
-            return res;
-        }
+      
         public override bool IsPageOpened()
         {
             return ProjectTitleBy.Displayed;
@@ -52,6 +51,11 @@ namespace FinalTask.Pages
         public bool IsModalDialogOpen()
         {
             return ModalDialogTitleBy.Text.Trim().Equals("Add project");
+        }
+
+        public bool IsAlertOpen()
+        {
+            return AlertHeaderBy.Displayed;
         }
 
         protected override string GetEndpoint()

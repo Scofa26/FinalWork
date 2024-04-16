@@ -19,6 +19,7 @@ namespace SpecFlowProject3.StepDefinitions.GUI
         protected ScenarioContext ScenarioContext { get; }
         protected LoginPage? LoginPage { get; set; }
         protected HomePage? HomePage { get; set; }
+        protected ProjectPage? ProjectPage { get; set; }
         protected NavigationSteps NavigationSteps { get; set; } 
         protected ProjectSteps ProjectSteps { get; set; } 
         protected User Admin { get; set; }

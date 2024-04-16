@@ -15,12 +15,13 @@ namespace SpecFlowProject3.StepDefinitions.GUI
         {
             HomePage = new HomePage(Driver);
             ProjectSteps = new ProjectSteps(Driver);
+            ProjectPage = new ProjectPage(Driver);
         }
 
         [When("user click AddProjectButton")]
         public void ClickAddProjectButton()
         {
-            HomePage.AddProjectButtonClick();
+            HomePage!.AddProjectButtonClick();
             HomePage.IsModalDialogOpen();
         }
 
@@ -39,10 +40,25 @@ namespace SpecFlowProject3.StepDefinitions.GUI
             ProjectSteps.CreateProject(project);
         }
 
+        [When(@"user enters ""(.*)"" to the projectName field and summary")]
+        public void FillSummaryWithBoundary(string name, string multilineText)
+        {
+            Project project = new()
+            { Name = name, Summary = multilineText };
+
+            ProjectSteps.CreateProject(project);
+        }
+
+        [Then("count of chars is equal to 80")]
+        public void CheckCountOfChars()
+        {
+            Assert.That(HomePage!.CountOfCharsBy.Text, Is.EqualTo("80/80"));
+        }
+
         [Then(@"Project is created with name ""(.*)""")]
         public void IsProjectCreated(string name)
         {
-            Assert.That(HomePage.FindAllProjects(name), Is.EqualTo(true));
+            Assert.That(ProjectPage!.IsPageOpened(), Is.EqualTo(true));   
         }
     }
 }
