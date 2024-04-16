@@ -15,7 +15,6 @@ namespace FinalTask.Core
             chromeOptions.AddArguments("--disable-gpu");
             chromeOptions.AddArguments("--disable-extensions");
             chromeOptions.AddArguments("--remote-debugging-pipe");
-
             //chromeOptions.AddArguments("--headless");
 
             chromeOptions.SetLoggingPreference(LogType.Browser, LogLevel.All);
