@@ -53,7 +53,7 @@ jobs:
     # Framework version of dotnet (example: net6.0, net7.0)
     #framework: # optional, default is null
     # Build configuration (example: Debug)
-         configuration: 'Debug'
+         configuration: Debug
     # Verbosity of the Dotnet App Build (default = minimal)
     #build-verbosity: # optional, default is minimal
     # Verbosity of the SpecFlow Test Execution (default = normal)
