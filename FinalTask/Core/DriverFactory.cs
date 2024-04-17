@@ -3,6 +3,7 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium;
 using WebDriverManager.DriverConfigs.Impl;
 using WebDriverManager;
+using OpenQA.Selenium.Interactions;
 
 namespace FinalTask.Core
 {
@@ -15,6 +16,8 @@ namespace FinalTask.Core
             chromeOptions.AddArguments("--disable-gpu");
             chromeOptions.AddArguments("--disable-extensions");
             chromeOptions.AddArguments("--remote-debugging-pipe");
+            chromeOptions.AddArgument("no-sandbox");
+
             //chromeOptions.AddArguments("--headless");
 
             chromeOptions.SetLoggingPreference(LogType.Browser, LogLevel.All);
