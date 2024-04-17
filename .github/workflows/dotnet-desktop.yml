@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        configuration: [Debug]
+        configuration: [Release]
 
     runs-on: ubuntu-latest  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
@@ -40,7 +40,7 @@ jobs:
       #cryptic-wizard/run-specflow-tests@v1.3.3
       with:
     # Path of the working directory for build assemblies (example: MySpecflowProject/bin/Debug/net7.0)
-         test-assembly-path: SpecFlowProject3/bin/Debug/net8.0
+         test-assembly-path: SpecFlowProject3/bin/Release/net8.0
     # Relative path of <MySpecflowProject.dll> (example: MySpecflowProject/bin/Debug/net7.0/MySpecflowProject.dll or MySpecflowProject.dll if using test-assembly-path)
          test-assembly-dll: SpecFlowProject3.dll
          test-execution-json: SpecFlowProject3.json
@@ -53,7 +53,7 @@ jobs:
     # Framework version of dotnet (example: net6.0, net7.0)
     #framework: # optional, default is null
     # Build configuration (example: Debug)
-         configuration: Debug
+         configuration: Release
     # Verbosity of the Dotnet App Build (default = minimal)
     #build-verbosity: # optional, default is minimal
     # Verbosity of the SpecFlow Test Execution (default = normal)
