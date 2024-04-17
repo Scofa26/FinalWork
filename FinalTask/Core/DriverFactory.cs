@@ -23,7 +23,7 @@ namespace FinalTask.Core
             chromeOptions.SetLoggingPreference(LogType.Driver, LogLevel.All);
 
             new DriverManager().SetUpDriver(new ChromeConfig());
-            return new ChromeDriver(chromeOptions);
+            return new ChromeDriver(ChromeDriverService.CreateDefaultService(), chromeOptions, TimeSpan.FromMinutes(3));
         }
 
         public IWebDriver? GetFirefoxDriver()
