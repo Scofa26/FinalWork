@@ -16,7 +16,6 @@ namespace SpecFlowProject3.Hooks
         {
             _browser = browser;
         }
-
         [BeforeScenario("GUI")]
         public void BeforeGUIScenario()
         {
