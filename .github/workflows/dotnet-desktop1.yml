@@ -1,0 +1,76 @@
+name: .NET Core Desktop
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    strategy:
+      matrix:
+        configuration: [Release]
+
+    runs-on: ubuntu-latest  # For a list of available runner types, refer to
+                             # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+
+    #env:
+     #Solution_Name: your-solution-name                         # Replace with your solution name, i.e. MyWpfApp.sln.
+      #Test_Project_Path: SpecFlowProject3.csproj                # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
+      #Wap_Project_Directory: your-wap-project-directory-name    # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
+      #Wap_Project_Path: your-wap-project-path                   # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    
+    - name: Run SpecFlow Tests
+  # You may pin to the exact commit or the version.
+  # uses: cryptic-wizard/run-specflow-tests@e777fc7e6f3e87142b6537dd2958e0856c63f85c
+      uses: ./
+      #cryptic-wizard/run-specflow-tests@v1.3.3
+      with:
+    # Path of the working directory for build assemblies (example: MySpecflowProject/bin/Debug/net7.0)
+         test-assembly-path: SpecFlowProject3/bin/Release/net8.0
+    # Relative path of <MySpecflowProject.dll> (example: MySpecflowProject/bin/Debug/net7.0/MySpecflowProject.dll or MySpecflowProject.dll if using test-assembly-path)
+         test-assembly-dll: SpecFlowProject3.dll
+         test-execution-json: SpecFlowProject3.json
+    # Relative path of <MySpecflowProjectTestExecution(s).json> (example: MySpecflowProject/bin/Debug/net7.0/TestExecution.json or TestExecution.json if using test-assembly-path)
+    #test-execution-json: # optional, default is TestExecution.json
+    # Name of Specflow LivingDoc output file (must end with .html) (example: MyTestResults.html)
+         output-html: MyTestResults.html
+    # Run tests that match the given description (example: TestCategory=CategoryA or FullyQualifiedName~Calculator)
+    #filter: # optional, default is null
+    # Framework version of dotnet (example: net6.0, net7.0)
+    #framework: # optional, default is null
+    # Build configuration (example: Debug)
+         configuration: 'Release'
+    # Verbosity of the Dotnet App Build (default = minimal)
+    #build-verbosity: # optional, default is minimal
+    # Verbosity of the SpecFlow Test Execution (default = normal)
+    #test-verbosity: # optional, default is normal
+    # Set to true to disable dotnet build and dotnet restore
+    #no-build: # optional, default is false
+    # Dotnet test logger to run in addition to Specflow Test Logger (example: trx)
+    #logger: # optional, default is null
+    # Dotnet test log file name; required if logger is defined (example: MyTestResults.trx)
+    #logger-file-name: # optional, default is null
+    # Set to false to disable uploading <LivingDoc.html> artifact automatically
+    #upload-artifact: # optional, default is true
+          
+    # Execute all unit tests in the solution
+    #- name: Execute unit tests
+     # run: dotnet test
+
+  
