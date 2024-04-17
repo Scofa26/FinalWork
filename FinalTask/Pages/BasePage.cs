@@ -7,8 +7,8 @@ namespace FinalTask.Pages
 {
     public abstract class BasePage
     {
-        protected IWebDriver Driver { get; private set; }
-        protected WaitHelpers WaitHelpers { get; private set; }
+        public IWebDriver Driver { get;  set; }
+        public WaitHelpers WaitHelpers { get;  set; }
 
         public BasePage(IWebDriver driver)
         {
