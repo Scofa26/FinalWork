@@ -36,7 +36,7 @@ jobs:
     - name: Run SpecFlow Tests
   # You may pin to the exact commit or the version.
   # uses: cryptic-wizard/run-specflow-tests@e777fc7e6f3e87142b6537dd2958e0856c63f85c
-      uses: ./
+      uses: cryptic-wizard/run-specflow-tests@v1.3.3
       #cryptic-wizard/run-specflow-tests@v1.3.3
       with:
     # Path of the working directory for build assemblies (example: MySpecflowProject/bin/Debug/net7.0)
