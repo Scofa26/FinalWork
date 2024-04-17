@@ -23,12 +23,9 @@ namespace FinalTask.Core
             chromeOptions.SetLoggingPreference(LogType.Driver, LogLevel.All);
 
             new DriverManager().SetUpDriver(new ChromeConfig());
-            ChromeDriver drv = new ChromeDriver(ChromeDriverService.CreateDefaultService(), chromeOptions, TimeSpan.FromMinutes(3));
-            drv.Manage().Timeouts().PageLoad.Add(System.TimeSpan.FromSeconds(30));
-            return drv;
-           // new ChromeDriver(chromeOptions);
-
-            
+            // ChromeDriver drv = new ChromeDriver(ChromeDriverService.CreateDefaultService(), chromeOptions, TimeSpan.FromMinutes(3));
+            // drv.Manage().Timeouts().PageLoad.Add(System.TimeSpan.FromSeconds(30));
+            return new ChromeDriver(chromeOptions); ;
         }
 
         public IWebDriver? GetFirefoxDriver()
