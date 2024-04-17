@@ -16,7 +16,7 @@ namespace FinalTask.Core
             chromeOptions.AddArguments("--disable-gpu");
             chromeOptions.AddArguments("--disable-extensions");
             chromeOptions.AddArguments("--remote-debugging-pipe");
-            chromeOptions.AddArgument("no-sandbox");
+            chromeOptions.AddArguments("no-sandbox");
 
             //chromeOptions.AddArguments("--headless");
 
