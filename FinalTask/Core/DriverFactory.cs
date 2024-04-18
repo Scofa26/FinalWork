@@ -18,7 +18,7 @@ namespace FinalTask.Core
             chromeOptions.AddArguments("--remote-debugging-pipe");
             chromeOptions.AddArguments("no-sandbox");
 
-            //chromeOptions.AddArguments("--headless");
+            chromeOptions.AddArguments("--headless");
             chromeOptions.SetLoggingPreference(LogType.Browser, LogLevel.All);
             chromeOptions.SetLoggingPreference(LogType.Driver, LogLevel.All);
 
