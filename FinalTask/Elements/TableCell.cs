@@ -16,7 +16,7 @@ namespace FinalTask.Elements
             _uiElement = uiElement;
         }
 
-        public UIElement DeleteAction() => _uiElement.FindUIElement(By.TagName("a"));
+        public UIElement DeleteAction() => _uiElement.FindUIElement(By.TagName("div"));
         public string Text => _uiElement.Text;
     }
 }

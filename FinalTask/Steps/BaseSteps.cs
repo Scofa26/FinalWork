@@ -11,6 +11,8 @@ namespace FinalTask.Steps
 
         protected LoginPage? LoginPage { get; set; }
         protected HomePage? HomePage { get; set; }
+        protected Admin? Admin { get; set; }
+        protected ProjectPage? ProjectPage { get; set; }
 
     }
 }

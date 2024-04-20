@@ -14,10 +14,28 @@ namespace FinalTask.Steps
         public NavigationSteps(IWebDriver driver) : base(driver)
         {
         }
+
+        public ProjectPage GoToProjectPage()
+        {
+            HomePage = new HomePage(Driver);
+            HomePage.ProjectNameTitleLinkBy.Click();
+            return new ProjectPage(Driver);
+        }
+
+        public RepositoryPage GoToRepositoryPage()
+        {
+            HomePage = new HomePage(Driver);
+            HomePage.ProjectNameTitleLinkBy.Click();
+            ProjectPage = new ProjectPage(Driver);
+            ProjectPage.PepositoryLinkBy.Click();
+            return new RepositoryPage(Driver);
+        }
+
         public LoginPage NavigateToLoginPage()
         {
             return new LoginPage(Driver);
         }
+
         public HomePage SuccessfulLogin(User user)
         {
             return Login<HomePage>(user);
@@ -26,6 +44,16 @@ namespace FinalTask.Steps
         public LoginPage IncorrectLogin(User user)
         {
             return Login<LoginPage>(user);
+        }
+
+        public Admin GoToAdminPanel()
+        {
+            return AdminPanel<Admin>();
+        }
+
+        public AdminProjects GoToAdminPanelProjects()
+        {
+            return AdminPanelProjects<AdminProjects>();
         }
 
         public T Login<T>(User user) where T : BasePage
@@ -38,5 +66,19 @@ namespace FinalTask.Steps
             return (T)Activator.CreateInstance(typeof(T), Driver, false);
         }
 
+        public T AdminPanel<T>() where T : BasePage
+        {  
+            HomePage = new HomePage(Driver);
+            HomePage.AdminLinkBy.Click();
+            return (T)Activator.CreateInstance(typeof(T), Driver, false);
+        }
+
+        public T AdminPanelProjects<T>() where T : BasePage
+        {
+            Admin = new Admin(Driver);
+            Admin.ProjectsLinkBy.Click();
+
+            return (T)Activator.CreateInstance(typeof(T), Driver, false);
+        }
     }
 }

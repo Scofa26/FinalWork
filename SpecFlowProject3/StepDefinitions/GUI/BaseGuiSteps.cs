@@ -19,10 +19,14 @@ namespace SpecFlowProject3.StepDefinitions.GUI
         protected ScenarioContext ScenarioContext { get; }
         protected LoginPage? LoginPage { get; set; }
         protected HomePage? HomePage { get; set; }
+        protected Admin? AdminPanel { get; set; }
+        protected AdminProjects? AdminPanelProjects { get; set; }
         protected ProjectPage? ProjectPage { get; set; }
+        protected RepositoryPage? RepositoryPage { get; set; }
         protected NavigationSteps NavigationSteps { get; set; } 
         protected ProjectSteps ProjectSteps { get; set; } 
         protected User Admin { get; set; }
+        protected User WrongUser { get; set; }
 
         public BaseGuiSteps(Browser browser, ScenarioContext scenarioContext)
         {
@@ -30,10 +34,15 @@ namespace SpecFlowProject3.StepDefinitions.GUI
             ScenarioContext = scenarioContext;
 
             Admin = new User
-
             {
                 Email = Configurator.AppSettings.Username,
                 Password = Configurator.AppSettings.Password
+            };
+
+            WrongUser = new User
+            {
+                Email = "cg@mail.com",
+                Password = "jksljk"
             };
         }
        

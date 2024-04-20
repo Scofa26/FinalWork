@@ -20,14 +20,19 @@ namespace FinalTask.Pages
         private static readonly By NavbarUserIconLink = By.CssSelector("[class='navbar__user__icon__link']");
         private static readonly By AlertHeader = By.CssSelector("[class='popup__menu__header']");
         private static readonly By AdminLink = By.CssSelector("body > div.navbar > div.navbar__menu > ul:nth-child(2) > li > a");
+        private static readonly By ProjectNameTitleLink = By.XPath("//div[@class='card__header__title']/a");
+        private static readonly By ProjectSummaryText = By.CssSelector("[data-target='note behavior--maxlength-counter.control']");
 
         public HomePage(IWebDriver driver) : base(driver)
         {
+
         }
 
         public HomePage(IWebDriver driver, bool openByUrl) : base(driver)
         {
+
         }
+
         public IWebElement ProjectTitleBy => WaitHelpers.WaitForExists(ProjectTitle);
         public IWebElement AddProjectButtonBy => WaitHelpers.WaitForExists(AddProjectButton);
         public IWebElement ProjectNameInputBy => WaitHelpers.WaitForExists(ProjectNameInput);
@@ -38,6 +43,8 @@ namespace FinalTask.Pages
         public IWebElement NavbarUserIconLinkBy => WaitHelpers.WaitForExists(NavbarUserIconLink);
         public IWebElement AlertHeaderBy => WaitHelpers.WaitForExists(AlertHeader);
         public IWebElement AdminLinkBy => WaitHelpers.WaitForExists(AdminLink);
+        public IWebElement ProjectNameTitleLinkBy => WaitHelpers.WaitForExists(ProjectNameTitleLink);
+        public IWebElement ProjectSummaryTextBy => WaitHelpers.WaitForExists(ProjectSummaryText);
 
         public void AddProjectButtonClick() => AddProjectButtonBy.Click();
         public void CreateProjectButtonClick() => CreateProjectButtonBy.Click();

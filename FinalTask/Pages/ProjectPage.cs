@@ -9,14 +9,16 @@ namespace FinalTask.Pages
 {
     public class ProjectPage : BasePage
     {
-        private static string END_POINT = "";
+        private static string END_POINT = "/projects/view/{id}";
         private static readonly By ProjectName = By.CssSelector("[class='page-header__title']");
+        private static readonly By PepositoryLink = By.CssSelector("[data-content='Repository']");
 
         public ProjectPage(IWebDriver driver) : base(driver)
         {
         }
 
         public IWebElement ProjectNameBy => WaitHelpers.WaitForExists(ProjectName);
+        public IWebElement PepositoryLinkBy => WaitHelpers.WaitForExists(PepositoryLink);
 
         protected override string GetEndpoint()
         {

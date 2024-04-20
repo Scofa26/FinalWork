@@ -35,8 +35,11 @@ namespace SpecFlowProject3.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CreateProject", "Проверка на успешное создание сущности \"Проект\"\r\nПроверка на ввод граничного знач" +
-                    "ения в поле Summary", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CreateProject", @"Проверка на успешное создание сущности ""Проект""
+Проверка на ввод граничного значения в поле Summary
+Проверка на ввод значения >80 символов в поле Summary
+Зафейлиный тест на создание проекта
+Проверка диалогового окна включена в эти тесты. На шаге * modal dialog is opened проверяю, что окно открыто, а также title", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,9 +79,9 @@ namespace SpecFlowProject3.Features
         
         public virtual void FeatureBackground()
         {
-#line 6
+#line 9
 #line hidden
-#line 7
+#line 10
     testRunner.Given("open the login page and enter pass and email", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
@@ -86,13 +89,19 @@ namespace SpecFlowProject3.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Succsessful creating the project")]
         [NUnit.Framework.CategoryAttribute("GUI")]
+        [NUnit.Framework.CategoryAttribute("allure.label.story:ProjectsFeature")]
+        [NUnit.Framework.CategoryAttribute("critical")]
+        [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void SuccsessfulCreatingTheProject()
         {
             string[] tagsOfScenario = new string[] {
-                    "GUI"};
+                    "GUI",
+                    "allure.label.story:ProjectsFeature",
+                    "critical",
+                    "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Succsessful creating the project", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 10
+#line 16
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -102,21 +111,21 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
+#line 9
 this.FeatureBackground();
 #line hidden
-#line 11
+#line 17
  testRunner.When("user click AddProjectButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 12
+#line 18
  testRunner.And("modal dialog is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 13
+#line 19
  testRunner.And("user enters \"projectName1\" to the projectName field and \"projectSummary\" to the p" +
                         "rojectSummary field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 14
- testRunner.Then("Project is created with name \"projectName1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 20
+ testRunner.Then("Project is created, homePage is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -125,13 +134,19 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Succsessful filling the summary field by boundary value")]
         [NUnit.Framework.CategoryAttribute("GUI")]
+        [NUnit.Framework.CategoryAttribute("allure.label.story:ProjectsFeature")]
+        [NUnit.Framework.CategoryAttribute("critical")]
+        [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void SuccsessfulFillingTheSummaryFieldByBoundaryValue()
         {
             string[] tagsOfScenario = new string[] {
-                    "GUI"};
+                    "GUI",
+                    "allure.label.story:ProjectsFeature",
+                    "critical",
+                    "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Succsessful filling the summary field by boundary value", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 17
+#line 26
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -141,23 +156,112 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
+#line 9
 this.FeatureBackground();
 #line hidden
-#line 18
+#line 27
  testRunner.When("user click AddProjectButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 19
+#line 28
  testRunner.And("modal dialog is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 20
+#line 29
  testRunner.And("user enters \"projectName2\" to the projectName field and summary", "Test with successful filling the summary field by boundary value. Count of chars", ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 24
+#line 33
  testRunner.Then("count of chars is equal to 80", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 25
- testRunner.And("Project is created with name \"projectName2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line 34
+ testRunner.And("Project is created, homePage is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Succsessful filling the summary field by value > 80")]
+        [NUnit.Framework.CategoryAttribute("GUI")]
+        [NUnit.Framework.CategoryAttribute("allure.label.story:ProjectsFeature")]
+        [NUnit.Framework.CategoryAttribute("critical")]
+        [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
+        public void SuccsessfulFillingTheSummaryFieldByValue80()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "GUI",
+                    "allure.label.story:ProjectsFeature",
+                    "critical",
+                    "allure.label.owner:SophiaChida"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Succsessful filling the summary field by value > 80", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 40
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 9
+this.FeatureBackground();
+#line hidden
+#line 41
+ testRunner.When("user click AddProjectButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 42
+ testRunner.And("modal dialog is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 43
+ testRunner.And("user enters summary is more than 80", "Test with successful filling the summary field by boundary value. Count of chars " +
+                        "83", ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 47
+ testRunner.Then("count of chars is equal to 80", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Failed creating the project")]
+        [NUnit.Framework.CategoryAttribute("GUI")]
+        [NUnit.Framework.CategoryAttribute("allure.label.story:ProjectsFeature")]
+        [NUnit.Framework.CategoryAttribute("critical")]
+        [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
+        public void FailedCreatingTheProject()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "GUI",
+                    "allure.label.story:ProjectsFeature",
+                    "critical",
+                    "allure.label.owner:SophiaChida"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Failed creating the project", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 53
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 9
+this.FeatureBackground();
+#line hidden
+#line 54
+ testRunner.When("user click AddProjectButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 55
+ testRunner.And("modal dialog is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 56
+ testRunner.And("user enters \"\" to the projectName field and \"\" to the projectSummary field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 57
+ testRunner.Then("Project is created, homePage is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
