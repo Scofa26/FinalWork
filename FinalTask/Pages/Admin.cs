@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using FinalTask.Elements;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,11 @@ namespace FinalTask.Pages
 {
     public class Admin : BasePage
     {
-        private static string END_POINT = "";
+        private static string END_POINT = "/admin/projects";
 
-        private static readonly By ProjectsLink = By.LinkText("https://mtswork.testmo.net/admin/projects");
+        private static readonly By ProjectsLink = By.CssSelector("[class='admin-home-links__link__title']");
         private static readonly By DeleteProjectButton = By.XPath("//tr[@data-name='projectName2']/child::*");
-
+        private static readonly By ProjectsTableBy = By.XPath("/html/body/div[2]/div[2]/div[2]/div/div[1]/div[3]/div[2]/div/table");
         public Admin(IWebDriver driver) : base(driver)
         {
         }
@@ -23,6 +24,7 @@ namespace FinalTask.Pages
 
         public IWebElement ProjectsLinkBy => WaitHelpers.WaitForExists(ProjectsLink);
         public IWebElement DeleteProjectButtonBy => WaitHelpers.WaitForExists(DeleteProjectButton);
+        public Table ProjectsTable => new(Driver, ProjectsTableBy);
 
 
         public override bool IsPageOpened()

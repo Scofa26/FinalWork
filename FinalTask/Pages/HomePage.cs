@@ -19,7 +19,7 @@ namespace FinalTask.Pages
         private static readonly By CountOfChars = By.CssSelector("[class='maxlength-counter__counter']");
         private static readonly By NavbarUserIconLink = By.CssSelector("[class='navbar__user__icon__link']");
         private static readonly By AlertHeader = By.CssSelector("[class='popup__menu__header']");
-        private static readonly By AdminLink = By.LinkText("https://mtswork.testmo.net/admin");
+        private static readonly By AdminLink = By.CssSelector("body > div.navbar > div.navbar__menu > ul:nth-child(2) > li > a");
 
         public HomePage(IWebDriver driver) : base(driver)
         {

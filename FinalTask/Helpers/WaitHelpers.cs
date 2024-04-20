@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using FinalTask.Elements;
 
 namespace FinalTask.Helpers
 {
@@ -60,10 +61,14 @@ namespace FinalTask.Helpers
                 throw new WebDriverTimeoutException("Элемент не стал невидимым в течение заданного времени");
             }
         }
-
         public bool WaitForVisibility(IWebElement element)
         {
             return _wait.Until(_ => element.Displayed);
+        }
+
+        public UIElement WaitChildElement(IWebElement webElement, By by)
+        {
+            return new UIElement(driver, _wait.Until(_ => webElement.FindElement(by)));
         }
 
         public IWebElement FluentWaitForElement(By locator)

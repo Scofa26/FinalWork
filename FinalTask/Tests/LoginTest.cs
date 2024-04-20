@@ -1,4 +1,5 @@
 ﻿using Allure.Net.Commons;
+using FinalTask.Elements;
 using FinalTask.Models;
 using FinalTask.Pages;
 using OpenQA.Selenium;
@@ -20,9 +21,11 @@ namespace FinalTask.Tests
             _loginPage.ClickLoginButton();
 
             HomePage _homepage = new HomePage(Driver);
-            _homepage.AddProjectButtonClick();
-
-            
+              _homepage.AdminLinkBy.Click();
+            Admin adminPafe = new Admin(Driver, true);
+            adminPafe.ProjectsLinkBy.Click();   
+            TableCell tableCell = adminPafe.ProjectsTable.GetCell("Project", "FirstProject", "Project");
+            tableCell.DeleteAction();
             Thread.Sleep(5000);
         }
 
