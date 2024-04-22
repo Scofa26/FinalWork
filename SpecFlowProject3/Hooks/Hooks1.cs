@@ -6,6 +6,8 @@ using FinalTask.Helpers.Configuration;
 using FinalTask.Models;
 using Allure.Net.Commons;
 using NUnit.Framework;
+using FinalTask.Clients;
+using FinalTask.Services;
 
 namespace SpecFlowProject3.Hooks
 {
@@ -13,10 +15,28 @@ namespace SpecFlowProject3.Hooks
     public sealed class Hooks1
     {
         private readonly Browser _browser;
+        private ProjectService ProjectService;
+
         public User Admin {  get; set; }
-        public Hooks1(Browser browser)
+
+        public Hooks1(Browser browser, ProjectService ProjectService)
         {
             _browser = browser;
+            this.ProjectService = ProjectService;
+        }
+
+
+        [BeforeScenario("API")]
+        public void SetupApi()
+        {
+            var restClient = new RestClientExtended();
+            ProjectService = new ProjectService(restClient);
+        }
+
+        [AfterScenario("API")]
+        public void TearDown()
+        {
+            ProjectService?.Dispose();
         }
 
         [BeforeScenario("GUI")]

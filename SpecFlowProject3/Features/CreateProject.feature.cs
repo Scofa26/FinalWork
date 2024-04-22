@@ -121,7 +121,7 @@ this.FeatureBackground();
  testRunner.And("modal dialog is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 19
- testRunner.And("user enters \"projectName1\" to the projectName field and \"projectSummary\" to the p" +
+ testRunner.And("user enters \"FirstProject\" to the projectName field and \"projectSummary\" to the p" +
                         "rojectSummary field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 20

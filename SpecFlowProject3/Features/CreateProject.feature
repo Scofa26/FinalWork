@@ -16,7 +16,7 @@ Background: Precondition authorization
 Scenario: Succsessful creating the project
 	When user click AddProjectButton
 	* modal dialog is opened
-	* user enters "projectName1" to the projectName field and "projectSummary" to the projectSummary field
+	* user enters "FirstProject" to the projectName field and "projectSummary" to the projectSummary field
 	Then Project is created, homePage is opened
 
 @GUI

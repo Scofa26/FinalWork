@@ -1,4 +1,5 @@
-﻿using NLog;
+﻿using FinalTask.Helpers.Configuration;
+using NLog;
 using RestSharp;
 using RestSharp.Authenticators;
 using System;
@@ -12,72 +13,69 @@ namespace FinalTask.Clients
 {
     public sealed class RestClientExtended
     {
-        /* private readonly RestClient _client;
-         private readonly Logger _logger = LogManager.GetCurrentClassLogger();
+        private readonly RestClient _client;
+        private readonly Logger _logger = LogManager.GetCurrentClassLogger();
 
-         public RestClientExtended()
-         {
-             var options = new RestClientOptions(Configurator.AppSettings.URL ?? throw new InvalidOperationException())
-             {
-                 Authenticator =
-                     new HttpBasicAuthenticator(Configurator.Admin.Username, Configurator.Admin.Password)
-             };
+        public RestClientExtended()
+        {
+            var options = new RestClientOptions(Configurator.AppSettings.URL ?? throw new InvalidOperationException())
+            {
+            };
 
-             _client = new RestClient(options);
-             Debug.Assert(Configurator.Admin != null, "Configurator.Admin == null");
-         }
+            _client = new RestClient(options);
+            Debug.Assert(Configurator.AppSettings.Username != null && Configurator.AppSettings.Password != null, "Configurator.Username && password == null");
+        }
 
-         public void Dispose()
-         {
-             _client?.Dispose();
-             GC.SuppressFinalize(this);
-         }
+        public void Dispose()
+        {
+            _client?.Dispose();
+            GC.SuppressFinalize(this);
+        }
 
-         private void LogRequest(RestRequest request)
-         {
-             _logger.Debug($"{request.Method} request to {request.Resource}");
+        private void LogRequest(RestRequest request)
+        {
+            _logger.Debug($"{request.Method} request to {request.Resource}");
 
-             var body = request.Parameters
-                 .FirstOrDefault(p => p.Type == ParameterType.RequestBody)?.Value;
+            var body = request.Parameters
+                .FirstOrDefault(p => p.Type == ParameterType.RequestBody)?.Value;
 
-             if (body != null)
-             {
-                 _logger.Debug($" body {body}");
-             }
-         }
+            if (body != null)
+            {
+                _logger.Debug($" body {body}");
+            }
+        }
 
-         private void LogResponse(RestResponse response)
-         {
-             if (response.ErrorException != null)
-             {
-                 _logger.Error($"Error retrieving response. Check inner details for more info. \n{response.ErrorException.Message}");
-             }
-             _logger.Debug($"Request finshed with statuscode  {response.StatusCode}");
+        private void LogResponse(RestResponse response)
+        {
+            if (response.ErrorException != null)
+            {
+                _logger.Error($"Error retrieving response. Check inner details for more info. \n{response.ErrorException.Message}");
+            }
+            _logger.Debug($"Request finshed with statuscode  {response.StatusCode}");
 
-             if (!string.IsNullOrEmpty(response.Content))
-             {
-                 _logger.Debug(response.Content);
-             }
-         }
+            if (!string.IsNullOrEmpty(response.Content))
+            {
+                _logger.Debug(response.Content);
+            }
+        }
 
 
-         public async Task<RestResponse> ExecuteAsync(RestRequest request)
-         {
-             LogRequest(request);
-             var response = await _client.ExecuteAsync(request);
-             LogResponse(response);
+        public async Task<RestResponse> ExecuteAsync(RestRequest request)
+        {
+            LogRequest(request);
+            var response = await _client.ExecuteAsync(request);
+            LogResponse(response);
 
-             return response;
-         }
+            return response;
+        }
 
-         public async Task<T> ExecuteAsync<T>(RestRequest request)
-         {
-             LogRequest(request);
-             var response = await _client.ExecuteAsync<T>(request);
-             LogResponse(response);
+        public async Task<T> ExecuteAsync<T>(RestRequest request)
+        {
+            LogRequest(request);
+            var response = await _client.ExecuteAsync<T>(request);
+            LogResponse(response);
 
-             return response.Data ?? throw new InvalidOperationException();
-         }
- */
+            return response.Data ?? throw new InvalidOperationException();
+        }
     }
 }
