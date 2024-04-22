@@ -13,6 +13,7 @@ namespace SpecFlowProject3.StepDefinitions.API
     {
         protected ScenarioContext ScenarioContext { get; }
         protected ProjectService ProjectService;
+        protected AutomationRunService AutomationRunService;
 
         public BaseApiSteps(ProjectService ProjectService,ScenarioContext scenarioContext)
         {
@@ -20,6 +21,10 @@ namespace SpecFlowProject3.StepDefinitions.API
             this.ProjectService = ProjectService;
         }
 
-
+        public BaseApiSteps(AutomationRunService AutomationRunService, ScenarioContext scenarioContext)
+        {
+            ScenarioContext = scenarioContext;
+            this.AutomationRunService = AutomationRunService;
+        }
     }
 }
