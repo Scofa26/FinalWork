@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        configuration: [Release]
+        configuration: [Debug]
 
     runs-on: ubuntu-latest  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
@@ -31,13 +31,17 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    
+      
+   # - uses: browser-actions/setup-chrome@v1
+     # with:
+      #  chrome-version: 124
+        
     - name: Run SpecFlow Tests
       uses: cryptic-wizard/run-specflow-tests@v1.3.3
       with:
          test-assembly-path: SpecFlowProject3/bin/Release/net8.0
          test-assembly-dll: SpecFlowProject3.dll
-         configuration: Release
+         configuration: Debug
 
     - name: Load test report history
       uses: actions/checkout@v3
