@@ -31,10 +31,11 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+      
+    - uses: browser-actions/setup-chrome@v1
+      with:
+        chrome-version: 123.0.6312.122
         
-    - uses: browser-actions/setup-chrome@123.0.6312.122
-    - run: chrome --version
-    
     - name: Run SpecFlow Tests
       uses: cryptic-wizard/run-specflow-tests@v1.3.3
       with:
