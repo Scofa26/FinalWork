@@ -32,7 +32,7 @@ jobs:
       with:
         dotnet-version: 8.0.x
         
-    - uses: browser-actions/setup-chrome@latest
+    - uses: browser-actions/setup-chrome@123.0.6312.122
     - run: chrome --version
     
     - name: Run SpecFlow Tests
