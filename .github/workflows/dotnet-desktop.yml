@@ -31,6 +31,9 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+        
+    - uses: browser-actions/setup-chrome@latest
+    - run: chrome --version
     
     - name: Run SpecFlow Tests
       uses: cryptic-wizard/run-specflow-tests@v1.3.3
