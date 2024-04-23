@@ -8,11 +8,15 @@
 
   <ItemGroup>
     <None Remove="appsettings.json" />
+    <None Remove="NLog.config" />
     <None Remove="specflow.json" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="specflow.json">

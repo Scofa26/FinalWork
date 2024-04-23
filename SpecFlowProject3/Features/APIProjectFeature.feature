@@ -3,7 +3,7 @@
 API тесты Project 
 
 @API
-@allure.label.story:API
+@allure.label.suite:API
 @critical
 @allure.label.owner:SophiaChida
 Scenario: NFE Get Project
@@ -11,7 +11,7 @@ Scenario: NFE Get Project
 	Then project is successfully got
 
 @API
-@allure.label.story:API
+@allure.label.suite:API
 @critical
 @allure.label.owner:SophiaChida
 Scenario: AFE Get Project with non-existetnt id
@@ -20,7 +20,7 @@ Scenario: AFE Get Project with non-existetnt id
 	* status code "NotFound"
 
 @API
-@allure.label.story:API
+@allure.label.suite:API
 @critical
 @allure.label.owner:SophiaChida
 Scenario: AFE Get Project with no auth

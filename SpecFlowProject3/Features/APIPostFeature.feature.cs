@@ -77,6 +77,7 @@ namespace SpecFlowProject3.Features
         [NUnit.Framework.DescriptionAttribute("Api Post Test")]
         [NUnit.Framework.CategoryAttribute("API")]
         [NUnit.Framework.CategoryAttribute("allure.label.story:API")]
+        [NUnit.Framework.CategoryAttribute("allure.label.suite:API")]
         [NUnit.Framework.CategoryAttribute("critical")]
         [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void ApiPostTest()
@@ -84,11 +85,12 @@ namespace SpecFlowProject3.Features
             string[] tagsOfScenario = new string[] {
                     "API",
                     "allure.label.story:API",
+                    "allure.label.suite:API",
                     "critical",
                     "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Api Post Test", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 9
+#line 10
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -98,10 +100,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 10
+#line 11
  testRunner.Given("called automation run with id \"41\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 11
+#line 12
  testRunner.Then("status code is 201 Created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

@@ -3,7 +3,7 @@
 Проверка POST для AutomationRun
 
 @API
-@allure.label.story:API
+@allure.label.suite:API
 @critical
 @allure.label.owner:SophiaChida
 Scenario: Api Post Test
