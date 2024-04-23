@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        configuration: [Debug]
+        configuration: [Release]
 
     runs-on: ubuntu-22.04  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
@@ -50,7 +50,7 @@ jobs:
       with:
          test-assembly-path: SpecFlowProject3/bin/Release/net8.0
          test-assembly-dll: SpecFlowProject3.dll
-         configuration: Debug
+         configuration: Release
 
     - name: Load test report history
       uses: actions/checkout@v3
