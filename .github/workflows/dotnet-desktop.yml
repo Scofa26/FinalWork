@@ -48,7 +48,7 @@ jobs:
     - name: Run SpecFlow Tests
       uses: cryptic-wizard/run-specflow-tests@v1.3.3
       with:
-         test-assembly-path: SpecFlowProject3/bin/Release/net8.0
+         test-assembly-path: SpecFlowProject3/bin/Debug/net8.0
          test-assembly-dll: SpecFlowProject3.dll
          configuration: Debug
 
@@ -66,7 +66,7 @@ jobs:
       with:
           gh_pages: gh-pages
           allure_history: allure-history
-          allure_results: SpecFlowProject3/bin/Release/net8.0/allure-results
+          allure_results: SpecFlowProject3/bin/Debug/net8.0/allure-results
 
     - name: Publish test report
       uses: peaceiris/actions-gh-pages@v3
