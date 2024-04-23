@@ -76,14 +76,14 @@ namespace SpecFlowProject3.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Successful login")]
         [NUnit.Framework.CategoryAttribute("GUI")]
-        [NUnit.Framework.CategoryAttribute("allure.label.story:GUI")]
+        [NUnit.Framework.CategoryAttribute("allure.label.suite:GUI")]
         [NUnit.Framework.CategoryAttribute("critical")]
         [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void SuccessfulLogin()
         {
             string[] tagsOfScenario = new string[] {
                     "GUI",
-                    "allure.label.story:GUI",
+                    "allure.label.suite:GUI",
                     "critical",
                     "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();

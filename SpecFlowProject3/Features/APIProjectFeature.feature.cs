@@ -76,14 +76,14 @@ namespace SpecFlowProject3.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("NFE Get Project")]
         [NUnit.Framework.CategoryAttribute("API")]
-        [NUnit.Framework.CategoryAttribute("allure.label.story:API")]
+        [NUnit.Framework.CategoryAttribute("allure.label.suite:API")]
         [NUnit.Framework.CategoryAttribute("critical")]
         [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void NFEGetProject()
         {
             string[] tagsOfScenario = new string[] {
                     "API",
-                    "allure.label.story:API",
+                    "allure.label.suite:API",
                     "critical",
                     "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
@@ -111,14 +111,14 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("AFE Get Project with non-existetnt id")]
         [NUnit.Framework.CategoryAttribute("API")]
-        [NUnit.Framework.CategoryAttribute("allure.label.story:API")]
+        [NUnit.Framework.CategoryAttribute("allure.label.suite:API")]
         [NUnit.Framework.CategoryAttribute("critical")]
         [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void AFEGetProjectWithNon_ExistetntId()
         {
             string[] tagsOfScenario = new string[] {
                     "API",
-                    "allure.label.story:API",
+                    "allure.label.suite:API",
                     "critical",
                     "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
@@ -150,14 +150,14 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("AFE Get Project with no auth")]
         [NUnit.Framework.CategoryAttribute("API")]
-        [NUnit.Framework.CategoryAttribute("allure.label.story:API")]
+        [NUnit.Framework.CategoryAttribute("allure.label.suite:API")]
         [NUnit.Framework.CategoryAttribute("critical")]
         [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void AFEGetProjectWithNoAuth()
         {
             string[] tagsOfScenario = new string[] {
                     "API",
-                    "allure.label.story:API",
+                    "allure.label.suite:API",
                     "critical",
                     "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();

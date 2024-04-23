@@ -89,14 +89,14 @@ namespace SpecFlowProject3.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Succsessful creating the project")]
         [NUnit.Framework.CategoryAttribute("GUI")]
-        [NUnit.Framework.CategoryAttribute("allure.label.story:GUI")]
+        [NUnit.Framework.CategoryAttribute("allure.label.suite:GUI")]
         [NUnit.Framework.CategoryAttribute("critical")]
         [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void SuccsessfulCreatingTheProject()
         {
             string[] tagsOfScenario = new string[] {
                     "GUI",
-                    "allure.label.story:GUI",
+                    "allure.label.suite:GUI",
                     "critical",
                     "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
@@ -134,14 +134,14 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Succsessful filling the summary field by boundary value")]
         [NUnit.Framework.CategoryAttribute("GUI")]
-        [NUnit.Framework.CategoryAttribute("allure.label.story:GUI")]
+        [NUnit.Framework.CategoryAttribute("allure.label.suite:GUI")]
         [NUnit.Framework.CategoryAttribute("critical")]
         [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void SuccsessfulFillingTheSummaryFieldByBoundaryValue()
         {
             string[] tagsOfScenario = new string[] {
                     "GUI",
-                    "allure.label.story:GUI",
+                    "allure.label.suite:GUI",
                     "critical",
                     "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
@@ -181,14 +181,14 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Succsessful filling the summary field by value > 80")]
         [NUnit.Framework.CategoryAttribute("GUI")]
-        [NUnit.Framework.CategoryAttribute("allure.label.story:GUI")]
+        [NUnit.Framework.CategoryAttribute("allure.label.suite:GUI")]
         [NUnit.Framework.CategoryAttribute("critical")]
         [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void SuccsessfulFillingTheSummaryFieldByValue80()
         {
             string[] tagsOfScenario = new string[] {
                     "GUI",
-                    "allure.label.story:GUI",
+                    "allure.label.suite:GUI",
                     "critical",
                     "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
@@ -226,14 +226,14 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Failed creating the project")]
         [NUnit.Framework.CategoryAttribute("GUI")]
-        [NUnit.Framework.CategoryAttribute("allure.label.story:GUI")]
+        [NUnit.Framework.CategoryAttribute("allure.label.suite:GUI")]
         [NUnit.Framework.CategoryAttribute("critical")]
         [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void FailedCreatingTheProject()
         {
             string[] tagsOfScenario = new string[] {
                     "GUI",
-                    "allure.label.story:GUI",
+                    "allure.label.suite:GUI",
                     "critical",
                     "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
