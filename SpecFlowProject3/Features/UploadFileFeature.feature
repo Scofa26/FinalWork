@@ -5,7 +5,7 @@ Background: Precondition authorization
     Given open the login page and enter pass and email
 
 @GUI
-@allure.label.story:UploadFileFeature
+@allure.label.suite:GUI
 @critical
 @allure.label.owner:SophiaChida
 Scenario: Successful upload the file

@@ -3,7 +3,7 @@
 Проверка на ввод некорректных данных на логин странице
 
 @GUI
-@allure.label.story:IncorrectDataLoginFeature
+@allure.label.suite:GUI
 @critical
 @allure.label.owner:SophiaChida
 Scenario: IncorrectLogin

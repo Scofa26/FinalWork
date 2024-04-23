@@ -42,7 +42,7 @@ namespace SpecFlowProject3.StepDefinitions.GUI
         {
             Project project = new()
             { Name = name, Summary = summary };
-            _logger.Info(project.ToString());
+            _logger.Debug($" project {project.ToString()}" );
 
             ProjectSteps.CreateProject(project);
         }
@@ -66,7 +66,6 @@ namespace SpecFlowProject3.StepDefinitions.GUI
             _logger.Info(project.ToString());
 
             HomePage!.ProjectSummaryInputBy.SendKeys(project.Summary);
-            Thread.Sleep(7000);
         }
 
         [Then("count of chars is equal to 80")]

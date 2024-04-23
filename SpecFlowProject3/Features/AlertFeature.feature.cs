@@ -85,19 +85,21 @@ namespace SpecFlowProject3.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Validation text in alert")]
         [NUnit.Framework.CategoryAttribute("GUI")]
-        [NUnit.Framework.CategoryAttribute("allure.label.story:AlertFeature")]
+        [NUnit.Framework.CategoryAttribute("allure.label.story:GUI")]
+        [NUnit.Framework.CategoryAttribute("allure.label.suite:GUI")]
         [NUnit.Framework.CategoryAttribute("critical")]
         [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void ValidationTextInAlert()
         {
             string[] tagsOfScenario = new string[] {
                     "GUI",
-                    "allure.label.story:AlertFeature",
+                    "allure.label.story:GUI",
+                    "allure.label.suite:GUI",
                     "critical",
                     "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Validation text in alert", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 11
+#line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -110,13 +112,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 12
+#line 13
  testRunner.When("user hovers navbaricon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 13
+#line 14
  testRunner.Then("alert is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 14
+#line 15
  testRunner.And("alerts Title is equal to \"Testmo resources\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
             }

@@ -85,14 +85,14 @@ namespace SpecFlowProject3.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Successful upload the file")]
         [NUnit.Framework.CategoryAttribute("GUI")]
-        [NUnit.Framework.CategoryAttribute("allure.label.story:UploadFileFeature")]
+        [NUnit.Framework.CategoryAttribute("allure.label.story:GUI")]
         [NUnit.Framework.CategoryAttribute("critical")]
         [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void SuccessfulUploadTheFile()
         {
             string[] tagsOfScenario = new string[] {
                     "GUI",
-                    "allure.label.story:UploadFileFeature",
+                    "allure.label.story:GUI",
                     "critical",
                     "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();

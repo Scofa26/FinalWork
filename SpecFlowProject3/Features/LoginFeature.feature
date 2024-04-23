@@ -2,7 +2,7 @@
 
 
 @GUI
-@allure.label.story:LoginFunctionality
+@allure.label.suite:GUI
 @critical
 @allure.label.owner:SophiaChida
 Scenario: Successful login

@@ -10,7 +10,7 @@ Background: Precondition authorization
     Given open the login page and enter pass and email
 
 @GUI
-@allure.label.story:ProjectsFeature
+@allure.label.suite:GUI
 @critical
 @allure.label.owner:SophiaChida
 Scenario: Succsessful creating the project
@@ -20,7 +20,7 @@ Scenario: Succsessful creating the project
 	Then Project is created, homePage is opened
 
 @GUI
-@allure.label.story:ProjectsFeature
+@allure.label.suite:GUI
 @critical
 @allure.label.owner:SophiaChida
 Scenario: Succsessful filling the summary field by boundary value
@@ -34,7 +34,7 @@ Scenario: Succsessful filling the summary field by boundary value
 	* Project is created, homePage is opened
 
 @GUI
-@allure.label.story:ProjectsFeature
+@allure.label.suite:GUI
 @critical
 @allure.label.owner:SophiaChida
 Scenario: Succsessful filling the summary field by value > 80
@@ -47,7 +47,7 @@ Scenario: Succsessful filling the summary field by value > 80
 	Then count of chars is equal to 80
 
 @GUI
-@allure.label.story:ProjectsFeature
+@allure.label.suite:GUI
 @critical
 @allure.label.owner:SophiaChida
 Scenario: Failed creating the project

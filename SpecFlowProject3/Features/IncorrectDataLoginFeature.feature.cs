@@ -76,14 +76,14 @@ namespace SpecFlowProject3.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("IncorrectLogin")]
         [NUnit.Framework.CategoryAttribute("GUI")]
-        [NUnit.Framework.CategoryAttribute("allure.label.story:IncorrectDataLoginFeature")]
+        [NUnit.Framework.CategoryAttribute("allure.label.story:GUI")]
         [NUnit.Framework.CategoryAttribute("critical")]
         [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
         public void IncorrectLogin()
         {
             string[] tagsOfScenario = new string[] {
                     "GUI",
-                    "allure.label.story:IncorrectDataLoginFeature",
+                    "allure.label.story:GUI",
                     "critical",
                     "allure.label.owner:SophiaChida"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();

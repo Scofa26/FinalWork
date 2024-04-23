@@ -1,5 +1,6 @@
 ﻿using FinalTask.Core;
 using FinalTask.Pages;
+using NLog;
 using NUnit.Framework;
 using OpenQA.Selenium.Interactions;
 using System;
@@ -13,6 +14,8 @@ namespace SpecFlowProject3.StepDefinitions.GUI
     [Binding]
     public class HomePageAlertGuiStepDefs : BaseGuiSteps
     {
+        private readonly Logger _logger = LogManager.GetCurrentClassLogger();
+
         public HomePageAlertGuiStepDefs(Browser browser, ScenarioContext scenarioContext) : base(browser, scenarioContext)
         {
             HomePage = new HomePage(Driver);
