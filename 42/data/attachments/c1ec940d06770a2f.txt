@@ -1,1 +1,0 @@
-Test with successful filling the summary field by boundary value. Count of chars 83
