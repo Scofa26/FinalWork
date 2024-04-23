@@ -20,7 +20,6 @@ namespace FinalTask.Clients
         {
             var options = new RestClientOptions(Configurator.AppSettings.URL ?? throw new InvalidOperationException())
             {
-
             };
 
             _client = new RestClient(options);
