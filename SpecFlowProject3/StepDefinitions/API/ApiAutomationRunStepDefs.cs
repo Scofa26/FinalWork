@@ -18,6 +18,7 @@ namespace SpecFlowProject3.StepDefinitions.API
         HttpStatusCode statusCode;
         public ApiAutomationRunStepDefs(AutomationRunService AutomationRunService, ScenarioContext scenarioContext) : base(AutomationRunService, scenarioContext)
         {
+
         }
 
         [Given(@"called automation run with id ""(.*)""")]
