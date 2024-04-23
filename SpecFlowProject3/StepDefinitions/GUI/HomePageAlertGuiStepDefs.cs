@@ -1,5 +1,6 @@
 ﻿using FinalTask.Core;
 using FinalTask.Pages;
+using NLog;
 using NUnit.Framework;
 using OpenQA.Selenium.Interactions;
 using System;
