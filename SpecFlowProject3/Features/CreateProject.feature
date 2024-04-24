@@ -46,6 +46,7 @@ Scenario: Succsessful filling the summary field by value > 80
 	"""
 	Then count of chars is equal to 80
 
+
 #@GUI
 #@allure.label.suite:GUI
 #@critical
