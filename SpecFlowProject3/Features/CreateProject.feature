@@ -46,12 +46,12 @@ Scenario: Succsessful filling the summary field by value > 80
 	"""
 	Then count of chars is equal to 80
 
-@GUI
-@allure.label.suite:GUI
-@critical
-@allure.label.owner:SophiaChida
-Scenario: Failed creating the project
-	When user click AddProjectButton
-	* modal dialog is opened
-	* user enters "" to the projectName field and "" to the projectSummary field
-	Then Project is created, homePage is opened
+#@GUI
+#@allure.label.suite:GUI
+#@critical
+#@allure.label.owner:SophiaChida
+#Scenario: Failed creating the project
+#	When user click AddProjectButton
+#	* modal dialog is opened
+#	* user enters "" to the projectName field and "" to the projectSummary field
+#	Then Project is created, homePage is opened

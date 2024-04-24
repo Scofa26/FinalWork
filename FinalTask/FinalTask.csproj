@@ -12,6 +12,7 @@
   <ItemGroup>
     <None Remove="appsettings.json" />
     <None Remove="Resources\BodyForAutomationRun.json" />
+    <None Remove="Resources\token.txt" />
     <None Remove="Resources\upload.txt" />
   </ItemGroup>
 
@@ -20,6 +21,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\BodyForAutomationRun.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\token.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\upload.txt">
