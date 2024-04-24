@@ -222,6 +222,50 @@ this.FeatureBackground();
             }
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Failed creating the project")]
+        [NUnit.Framework.CategoryAttribute("GUI")]
+        [NUnit.Framework.CategoryAttribute("allure.label.suite:GUI")]
+        [NUnit.Framework.CategoryAttribute("critical")]
+        [NUnit.Framework.CategoryAttribute("allure.label.owner:SophiaChida")]
+        public void FailedCreatingTheProject()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "GUI",
+                    "allure.label.suite:GUI",
+                    "critical",
+                    "allure.label.owner:SophiaChida"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Failed creating the project", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 54
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 9
+this.FeatureBackground();
+#line hidden
+#line 55
+ testRunner.When("user click AddProjectButton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 56
+ testRunner.And("modal dialog is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 57
+ testRunner.And("user enters \"\" to the projectName field and \"\" to the projectSummary field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 58
+ testRunner.Then("Project is created, homePage is opened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
